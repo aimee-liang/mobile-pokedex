@@ -5,14 +5,18 @@ import {NativeRouter, Route} from 'react-router-native'
 export default function Home (){
 
     const styles = Stylesheet.create({
-        flex: 1,
-        alignItems: "center"
+        container: {
+            flex: 1,
+            alignItems: "center"
+        }
     })
 
     return (
         <NativeRouter>
-            <Route exact path="/pokemon" />
-
+            <View style={styles.container}>
+                <Route exact path="/pokemon" render={() => <Pokemon />} />
+                <Route exact path="/berries" render={() => <Berries/>} />
+            </View>
         </NativeRouter>
     )
 }
