@@ -1,7 +1,7 @@
 import React from 'react'
-import {Stylesheet, View, Text} from 'react-native'
+import {Stylesheet, View, Text, Image} from 'react-native'
 
-export default function Individual(){
+export default function Individual(props){
     const styles= Stylesheet.create({
         container: {
             flex: 1
@@ -10,7 +10,9 @@ export default function Individual(){
 
     return (
         <View style={styles.container}>
-
+            <Image>{props.pokemon["sprites"]["front_default"]}</Image>
+            <Text>{props.pokemon.name}</Text>
+            <Text>{props.pokemon["types"]["type"]["name"]}</Text>
         </View>
     )
 }
