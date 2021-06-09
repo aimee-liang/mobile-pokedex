@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-import {Stylesheet, View, Text} from "react-native"
+import {Stylesheet, View} from "react-native"
 import Individual from "./Individual"
 
 export default function Pokemon(){

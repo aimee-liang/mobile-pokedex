@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import { render } from 'react-dom'
 import {Stylesheet} from 'react-native'
 import Berry from "./Berry"
 
@@ -18,7 +17,7 @@ export default function Berries(){
     }, [])
 
     const fetchBerries = () => {
-        for (let i = 0; i <= 100; i++){
+        for (let i = 0; i <= 50; i++){
             fetch(berriesUrl)
                 .then(response => response.json())
                 .then(data => setAllBerries([allBerries, ...data]))

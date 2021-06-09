@@ -7,13 +7,18 @@ export default function Berry(props){
             flex: 1
         },
         berryName: {
+            fontSize: 24,
             fontWeight: "bold"
+        },
+        pokeType: {
+            fontSize: 18
         }
     })
 
     return (
         <View style={styles.container}>
             <Text style={styles.berryName}>{props.berry["name"]}</Text>
+            <Text style={styles.pokeType}>{props.berry["natural_gift_type"]["name"]}</Text>
         </View>
     )
 }
