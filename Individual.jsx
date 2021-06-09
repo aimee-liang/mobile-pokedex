@@ -11,14 +11,14 @@ export default function Individual(props){
             width: "200"
         },
         pokeName: {
-            
+            fontWeight: "bold"
         }
     })
 
     return (
         <View style={styles.container}>
             <Image style={styles.frontSprite}>{props.pokemon["sprites"]["front_default"]}</Image>
-            <Text>{props.pokemon.name}</Text>
+            <Text style={styles.pokeName}>{props.pokemon["name"]}</Text>
             <Text>{props.pokemon["types"]["type"]["name"]}</Text>
         </View>
     )

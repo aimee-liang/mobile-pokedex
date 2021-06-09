@@ -34,7 +34,7 @@ export default function Pokemon(){
     }
 
     return (
-        <View>
+        <View style={styles.container}>
             {renderPokemon()}
         </View>
     )
