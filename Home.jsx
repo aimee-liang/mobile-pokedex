@@ -1,5 +1,5 @@
-import React from 'react'
-import {Stylesheet, View, Text} from 'react-native'
+import React, {useState} from 'react'
+import {Stylesheet, View, Text, Alert, Modal} from 'react-native'
 import {NativeRouter, Route} from 'react-router-native'
 
 export default function Home (){
@@ -17,6 +17,8 @@ export default function Home (){
             fontSize: 26
         }
     })
+
+    const [modalVisible, setModalVisible] = useState(false)
 
     return (
         <NativeRouter>
