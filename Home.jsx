@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Stylesheet, View, Text, Alert, Modal} from 'react-native'
+import {Stylesheet, View, Text, Modal} from 'react-native'
 import {NativeRouter, Route} from 'react-router-native'
 
 export default function Home (){
@@ -20,6 +20,10 @@ export default function Home (){
 
     const [modalVisible, setModalVisible] = useState(false)
 
+    const updateVisibility = () => {
+        
+    }
+
     return (
         <NativeRouter>
             <View style={styles.container}>
@@ -27,6 +31,7 @@ export default function Home (){
                     <Text style={styles.pokedexText}>Pokedex</Text>
                 </View>
 
+                <Modal visible={modalVisible}></Modal>
                 <Route exact path="/pokemon" render={() => <Pokemon />} />
                 <Route exact path="/berries" render={() => <Berries/>} />
             </View>
