@@ -21,7 +21,7 @@ export default function Home (){
     const [modalVisible, setModalVisible] = useState(false)
 
     const updateVisibility = () => {
-        
+        setModalVisible(!modalVisible)
     }
 
     return (
@@ -31,7 +31,7 @@ export default function Home (){
                     <Text style={styles.pokedexText}>Pokedex</Text>
                 </View>
 
-                <Modal visible={modalVisible}></Modal>
+                <Modal visible={modalVisible} onPress={updateVisibility}></Modal>
                 <Route exact path="/pokemon" render={() => <Pokemon />} />
                 <Route exact path="/berries" render={() => <Berries/>} />
             </View>
