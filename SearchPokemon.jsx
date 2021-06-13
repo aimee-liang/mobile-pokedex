@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { StyleSheet, View, TextInput } from 'react-native'
 
 export default function SearchPokemon(){
@@ -8,11 +8,11 @@ export default function SearchPokemon(){
         }
     })
 
+    const [pokemonName, setPokemonName] = useState("")
+
     return (
         <View style={styles.container}>
-            <TextInput>
-                
-            </TextInput>
+            <TextInput onChangeText={}></TextInput>
         </View>
     )
 }
