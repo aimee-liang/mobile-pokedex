@@ -11,9 +11,16 @@ export default function SearchPokemon(){
     const [pokemonName, setPokemonName] = useState("")
     const [modalVisible, setModalVisible] = useState(false)
 
+    const updateVisibility = () => {
+        setModalVisible(!modalVisible)
+    }
+
     return (
-        <View style={styles.container}>
-            <TextInput onChangeText={setPokemonName} value={pokemonName} placeholder="Enter a Pokemon Name"></TextInput>
-        </View>
+        <>
+            <Modal visible={modalVisible} onPress={updateVisibility} />
+            <View style={styles.container}>
+                <TextInput onChangeText={setPokemonName} value={pokemonName} placeholder="Enter a Pokemon Name"></TextInput>
+            </View>
+        </>
     )
 }
