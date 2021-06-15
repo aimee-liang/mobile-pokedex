@@ -5,7 +5,8 @@ export default function SearchPokemon(){
     const styles = StyleSheet.create({
         container:{
             flex: 1
-        }
+        },
+        modalContainer
     })
 
     const [pokemonName, setPokemonName] = useState("")
