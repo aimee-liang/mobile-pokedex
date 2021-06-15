@@ -17,7 +17,7 @@ export default function SearchPokemon(){
 
     return (
         <>
-            <Modal visible={modalVisible} onPress={updateVisibility} />
+            <Modal visible={modalVisible} onPress={updateVisibility}>Looking for a Pokemon? </Modal>
             <View style={styles.container}>
                 <TextInput onChangeText={setPokemonName} value={pokemonName} placeholder="Enter a Pokemon Name"></TextInput>
             </View>
