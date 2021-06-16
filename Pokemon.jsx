@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react"
 import {Stylesheet, View} from "react-native"
 import Individual from "./Individual"
+import SearchPokemon from "./SearchPokemon"
 
 export default function Pokemon(){
     const styles = Stylesheet.create({
@@ -13,6 +14,7 @@ export default function Pokemon(){
     })
 
     const [first100Pokemon, setFirst100Pokemon] = useState([])
+    const [searchTerm, setSearchTerm] = useState("")
     const pokeUrl = `https://pokeapi.co/api/v2/pokemon/${i}`
 
     useEffect(() => {
@@ -33,8 +35,13 @@ export default function Pokemon(){
         })
     }
 
+    const setPokemonName = (name) => {
+        setSearchTerm(name)
+    }
+
     return (
         <View style={styles.container}>
+            <SearchPokemon setPokemonName={setPokemonName} />
             {renderPokemon()}
         </View>
     )
