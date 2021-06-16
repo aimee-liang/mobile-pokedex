@@ -18,7 +18,7 @@ export default function SearchPokemon(){
 
     return (
         <View style={styles.container}>
-            <TextInput onChangeText={setPokeName} value={pokeName} placeholder="Enter a Pokemon Name"></TextInput>
+            <TextInput onChangeText={setPokeName} value={pokeName} placeholder="Enter a Pokemon Name" />
             <Button onPress={searchBarHandler} title="🔎" />
         </View>
     )

@@ -14,8 +14,10 @@ export default function Pokemon(){
     })
 
     const [first100Pokemon, setFirst100Pokemon] = useState([])
+    const [foundPokemon, setFoundPokemon] = useState([])
     const [searchTerm, setSearchTerm] = useState("")
     const pokeUrl = `https://pokeapi.co/api/v2/pokemon/${i}`
+    const URL = `https://pokeapi.co/api/v2/pokemon/`
 
     useEffect(() => {
         fetchPokemon()
@@ -38,6 +40,15 @@ export default function Pokemon(){
     const setPokemonName = (name) => {
         setSearchTerm(name)
     }
+
+    const filterAPI = () => {
+        let newURL = URL + `${searchTerm}`
+        fetch(newURL)
+            .then(response => response.json())
+            .then(data => setFoundPokemon([foundPokemon, ...data]))
+    }
+
+    
 
     return (
         <View style={styles.container}>
