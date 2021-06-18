@@ -8,9 +8,6 @@ export default function Pokemon(){
         container:{
             flex: 1
         },
-        individualPokemon:{
-
-        }
     })
 
     const [first100Pokemon, setFirst100Pokemon] = useState([])
@@ -48,7 +45,9 @@ export default function Pokemon(){
             .then(data => setFoundPokemon([foundPokemon, ...data]))
     }
 
-    
+    const renderTheFoundPokemon = () => {
+        
+    }
 
     return (
         <View style={styles.container}>
