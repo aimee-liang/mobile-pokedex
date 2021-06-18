@@ -46,7 +46,7 @@ export default function Pokemon(){
     }
 
     const renderTheFoundPokemon = () => {
-        
+        return <Individual foundPokemon={foundPokemon} />
     }
 
     return (
