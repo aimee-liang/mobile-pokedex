@@ -1,6 +1,12 @@
 import React, {useState} from 'react'
 import {Stylesheet, View, Text, Modal} from 'react-native'
+import { createBottomTabNavigator } from 'react-navigation-tabs'
 import {NativeRouter, Route} from 'react-router-native'
+
+
+const TabNavigator = createBottomTabNavigator({
+
+})
 
 export default function Home (){
 
