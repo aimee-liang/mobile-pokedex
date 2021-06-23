@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {Stylesheet, View, Text, Modal} from 'react-native'
+import {createAppContainer} from 'react-navigation'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
 import {NativeRouter, Route} from 'react-router-native'
 
