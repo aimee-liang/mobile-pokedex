@@ -5,14 +5,14 @@ import { createBottomTabNavigator } from 'react-navigation-tabs'
 import {NativeRouter, Route} from 'react-router-native'
 
 
-const TabNavigator = createBottomTabNavigator({
-    Pokemon: {
-        screen: Pokemon
-    },
-    Berries: {
-        screen: Berries
-    }
-})
+// const TabNavigator = createBottomTabNavigator({
+//     Pokemon: {
+//         screen: Pokemon
+//     },
+//     Berries: {
+//         screen: Berries
+//     }
+// })
 
 export default function Home (){
 
