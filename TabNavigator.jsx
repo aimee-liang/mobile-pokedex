@@ -11,3 +11,5 @@ const TabNavigator = createBottomTabNavigator({
         screen: Berries
     }
 })
+
+export default createAppContainer(TabNavigator)
