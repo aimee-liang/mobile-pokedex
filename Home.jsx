@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Individual from './Individual'
 import Pokemon from './Pokemon'
+import SearchPokemon from './SearchPokemon'
 import {Stylesheet, View, Text} from 'react-native'
 
 export default function Home (){
@@ -42,6 +43,7 @@ export default function Home (){
         <View>
             <Text>Pokedex</Text>
             {/* {allUrls()} */}
+            <SearchPokemon/>
             <Pokemon/>
             {/* <Individual pokemon={pokemon}/> */}
         </View>
