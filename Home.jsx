@@ -39,6 +39,25 @@ export default function Home (){
     //     fetchPokemon()
     // }, [])
 
+    const [searchTerm, setSearchTerm] = useState("")
+    const [foundPokemon, setFoundPokemon] = useState([])
+    const pokeUrl = `https://pokeapi.co/api/v2/pokemon/`
+
+    const setPokemonName = name => {
+        setSearchTerm(name)
+    }
+
+    const filterAPI = () => {
+        let newURL = pokeUrl + `${searchTerm}`
+        fetch(newURL)
+            .then(response => response.json())
+            .then(data => setFoundPokemon([foundPokemon, ...data]))
+    }
+
+    const renderTheFoundPokemon = () => {
+        return <div>{foundPokemon}</div>
+    }
+
     return (
         <View>
             <Text>Pokedex</Text>
